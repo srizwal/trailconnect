@@ -1,0 +1,54 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem 1rem;
+}
+.auth-bg { position: fixed; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.auth-overlay { position: fixed; inset: 0; background: rgba(10,31,20,0.75); backdrop-filter: blur(2px); z-index: 0; }
+
+.auth-card {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 440px;
+  padding: 2.5rem;
+  animation: fadeUp 0.4s ease;
+}
+
+.auth-logo {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem;
+  color: var(--forest-mid); margin-bottom: 1.5rem;
+}
+
+.auth-card h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 0.3rem; }
+.auth-subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+.demo-btns { display: flex; align-items: center; gap: 8px; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.demo-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+.demo-btn { text-transform: capitalize; }
+
+.auth-form { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.25rem; }
+
+.input-icon-wrap { position: relative; display: flex; align-items: center; }
+.input-icon { position: absolute; left: 12px; color: var(--stone); pointer-events: none; z-index: 1; }
+.input-with-icon { padding-left: 38px; }
+.input-icon-right { position: absolute; right: 12px; background: none; border: none; color: var(--stone); cursor: pointer; display: flex; padding: 0; }
+
+.auth-divider {
+  position: relative; text-align: center; margin: 1.25rem 0;
+  color: var(--text-muted); font-size: 0.82rem;
+}
+.auth-divider::before {
+  content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border);
+}
+.auth-divider span { position: relative; background: var(--card-bg); padding: 0 12px; }
+
+.google-btn { display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 600; margin-bottom: 1.25rem; }
+
+.auth-footer { text-align: center; font-size: 0.88rem; color: var(--text-muted); }
+.auth-footer a { color: var(--forest-light); font-weight: 600; }
+
+.auth-terms { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-bottom: 1rem; line-height: 1.6; }
+.auth-terms a { color: var(--forest-light); }

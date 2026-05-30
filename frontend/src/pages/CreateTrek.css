@@ -1,0 +1,23 @@
+.create-page { min-height: 100vh; }
+.create-header { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%); padding: 3rem 0; color: white; text-align: center; }
+.create-header-icon { background: rgba(255,255,255,0.1); width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
+.create-header h1 { font-size: 2rem; font-weight: 900; margin-bottom: 0.4rem; }
+.create-header p { opacity: 0.75; }
+.create-body { padding: 2.5rem 0 5rem; max-width: 780px; }
+.create-form { display: flex; flex-direction: column; gap: 1.5rem; }
+.form-section { padding: 1.75rem; }
+.form-section-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-full { grid-column: 1 / -1; }
+.textarea { resize: vertical; min-height: 100px; }
+.input-error { border-color: #ef4444 !important; }
+.field-error { font-size: 0.78rem; color: #ef4444; margin-top: 2px; }
+.equip-input-row { display: flex; gap: 10px; margin-bottom: 1rem; }
+.equip-input-row .input { flex: 1; }
+.equip-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.equip-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--mist); border: 1px solid var(--border); color: var(--text); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; }
+.equip-tag button { background: none; border: none; color: var(--text-muted); cursor: pointer; display: flex; padding: 0; }
+.equip-empty { color: var(--text-muted); font-size: 0.88rem; font-style: italic; }
+.form-actions { display: flex; justify-content: flex-end; gap: 1rem; padding-top: 0.5rem; }
+.warning-box { display: flex; align-items: flex-start; gap: 10px; background: #fff5f0; border: 1px solid #fde8d8; border-left: 4px solid #f97316; border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.88rem; color: #7c3b1a; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } .form-actions { flex-direction: column; } }

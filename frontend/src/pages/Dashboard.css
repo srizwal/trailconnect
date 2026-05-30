@@ -1,0 +1,82 @@
+.dashboard { min-height: 100vh; }
+
+.dash-header { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%); padding: 2.5rem 0 3.5rem; color: white; }
+.dash-header-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+
+.dash-profile { display: flex; gap: 1.5rem; align-items: flex-start; }
+.dash-avatar-wrap { position: relative; flex-shrink: 0; }
+.dash-avatar { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); }
+.exp-badge { position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); padding: 2px 10px; border-radius: 10px; font-size: 0.68rem; font-weight: 700; text-transform: capitalize; white-space: nowrap; }
+.exp-beginner { background: #22c55e; color: white; }
+.exp-intermediate { background: #f59e0b; color: white; }
+.exp-advanced { background: #f97316; color: white; }
+.exp-expert { background: #ef4444; color: white; }
+
+.dash-profile-info h1 { font-size: 1.6rem; font-weight: 900; margin-bottom: 4px; }
+.dash-location { display: flex; align-items: center; gap: 4px; font-size: 0.85rem; opacity: 0.75; margin-bottom: 6px; }
+.dash-bio { font-size: 0.88rem; opacity: 0.8; max-width: 400px; line-height: 1.5; margin-bottom: 10px; }
+.dash-social-counts { display: flex; gap: 1rem; font-size: 0.85rem; opacity: 0.8; }
+.dash-social-counts strong { color: white; }
+.dash-header-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.dash-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: -1.75rem; margin-bottom: 2rem; }
+.dash-stat { padding: 1.25rem; text-align: center; background: var(--card-bg); }
+.dash-stat-icon { color: var(--forest-light); display: flex; justify-content: center; margin-bottom: 0.5rem; }
+.dash-stat-val { font-size: 1.8rem; font-weight: 900; font-family: 'Syne', sans-serif; color: var(--text); }
+.dash-stat-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.dash-body { padding-bottom: 5rem; }
+
+.dash-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 2rem; }
+.dash-tab { padding: 10px 22px; border: none; background: none; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: var(--transition); border-bottom: 2px solid transparent; margin-bottom: -2px; text-transform: capitalize; }
+.dash-tab:hover { color: var(--text); }
+.dash-tab.active { color: var(--forest-mid); border-bottom-color: var(--forest-mid); }
+
+.dash-overview { animation: fadeUp 0.3s ease; }
+.dash-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.dash-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.dash-section-header h3 { display: flex; align-items: center; gap: 6px; font-size: 1rem; font-weight: 700; }
+.dash-sub-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; }
+
+.empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; padding: 2.5rem; text-align: center; color: var(--text-muted); }
+.empty-state svg { opacity: 0.3; }
+.empty-state p { font-size: 0.9rem; }
+
+.mini-trek-card { display: flex; align-items: center; gap: 12px; padding: 10px 14px; margin-bottom: 8px; text-decoration: none; color: var(--text); transition: var(--transition); }
+.mini-trek-card:hover { transform: translateX(4px); }
+.mini-trek-card img { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
+.mini-trek-card div { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.mini-trek-card strong { font-size: 0.9rem; font-weight: 700; }
+.mini-trek-card span { font-size: 0.76rem; color: var(--text-muted); display: flex; align-items: center; gap: 3px; }
+.ml-auto { margin-left: auto; color: var(--text-muted); flex-shrink: 0; }
+
+.my-treks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+.my-trek-card { overflow: hidden; text-decoration: none; color: var(--text); transition: var(--transition); }
+.my-trek-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.my-trek-card img { width: 100%; height: 160px; object-fit: cover; }
+.my-trek-info { padding: 1rem; display: flex; flex-direction: column; gap: 4px; }
+.my-trek-info strong { font-size: 0.95rem; font-weight: 700; margin: 4px 0; }
+.my-trek-info span { font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+
+.booking-row { display: flex; align-items: center; gap: 14px; padding: 12px 16px; margin-bottom: 10px; }
+.booking-thumb { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
+.booking-info { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.booking-info strong { font-size: 0.92rem; }
+.booking-info span { font-size: 0.76rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+.booking-info code { font-family: monospace; font-size: 0.75rem; background: var(--mist); padding: 1px 5px; border-radius: 4px; }
+.booking-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+.booking-status { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; text-transform: capitalize; }
+
+.badges-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.25rem; }
+.badge-card { padding: 1.5rem; text-align: center; transition: var(--transition); }
+.badge-card.earned { border-color: var(--forest-light); }
+.badge-card.locked { opacity: 0.65; }
+.badge-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.badge-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+.badge-card p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.badge-status { font-size: 0.78rem; font-weight: 700; }
+.badge-status.earned { color: var(--forest-light); }
+.badge-status.locked { color: var(--stone); }
+
+@media (max-width: 900px) { .dash-stats-row { grid-template-columns: repeat(2, 1fr); } .dash-two-col { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .dash-header-inner { flex-direction: column; } .dash-profile { flex-direction: column; } .dash-stats-row { grid-template-columns: repeat(2, 1fr); } }

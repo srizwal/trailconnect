@@ -1,0 +1,68 @@
+.sos-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  animation: pulse-sos 2s ease infinite;
+}
+.sos-fab:hover { transform: scale(1.05); box-shadow: 0 6px 28px rgba(239,68,68,0.6); }
+
+@keyframes pulse-sos {
+  0%, 100% { box-shadow: 0 4px 20px rgba(239,68,68,0.5); }
+  50% { box-shadow: 0 4px 32px rgba(239,68,68,0.8); }
+}
+
+.sos-modal-backdrop {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.sos-modal {
+  position: relative;
+  max-width: 400px; width: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-top: 4px solid #ef4444;
+  animation: fadeUp 0.25s ease;
+}
+
+.sos-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: none; border: none;
+  color: var(--text-muted); cursor: pointer;
+}
+
+.sos-icon {
+  color: #ef4444;
+  display: flex; justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.sos-modal h2 { font-size: 1.4rem; font-weight: 900; margin-bottom: 0.75rem; color: #ef4444; }
+.sos-modal p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+
+.sos-info {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  font-size: 0.8rem; color: var(--text-muted);
+  background: var(--mist); border-radius: 8px; padding: 8px 12px;
+  margin-bottom: 1.25rem;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "trailconnect",
+  "version": "1.0.0",
+  "description": "Full-stack trekking community platform",
+  "scripts": {
+    "backend": "cd backend && node server.js",
+    "frontend": "cd frontend && npx react-scripts start",
+    "seed": "cd backend && node seed.js",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npx nodemon server.js"
+  },
+  "keywords": ["trekking", "hiking", "community", "fullstack"],
+  "author": "TrailConnect Team",
+  "license": "MIT"
+}
